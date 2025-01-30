@@ -1,10 +1,28 @@
 # Unit-Test-Tutorial mit Karma und NX Angular
 
-Dieses Tutorial erklärt, wie du Unit-Tests in einem NX Angular-Projekt mit Karma einrichtest und verwendest. Es umfasst praktische Beispiele und Aufgaben, um sicherzustellen, dass du das Gelernte direkt anwenden kannst.
+Dieses Tutorial erklärt, wie du Unit-Tests in einem NX Angular-Projekt mit Karma verwendest. Es umfasst praktische Beispiele und Aufgaben, um sicherzustellen, dass du das Gelernte direkt anwenden kannst.
 
 ---
 
-## Abschnitt 1: Grundlagen von Unit-Tests
+## Abschnitt 1: Einführung in Unit-Tests
+
+Unit-Tests sind automatisierte Tests, die einzelne Einheiten einer Anwendung – wie Funktionen, Methoden oder Klassen – isoliert prüfen. Ziel ist es, sicherzustellen, dass diese Einheiten korrekt funktionieren.
+
+**Warum Unit-Tests?**
+- Verbesserte Code-Qualität.
+- Schnelleres Finden von Fehlern.
+- Dokumentation des erwarteten Verhaltens.
+- Einfachere Wartung und Refaktorierung.
+
+### Aufgabe 1: Erste Schritte mit Unit-Tests
+
+1. Lies die Dokumentation zu Karma und Jasmine.
+2. Überlege dir, welche Teile deiner Anwendung besonders wichtig für Tests sind.
+3. Erstelle eine Liste mit Funktionen oder Komponenten, die du testen möchtest.
+
+---
+
+## Abschnitt 2: Grundlagen von Unit-Tests
 
 Unit-Tests überprüfen einzelne Funktionen oder Komponenten unabhängig von ihrer Umgebung.
 
@@ -39,7 +57,7 @@ describe('AppComponent', () => {
 });
 ```
 
-### Aufgabe 1: Test hinzufügen
+### Aufgabe 2: Test hinzufügen
 
 Erweitere den obigen Test, um sicherzustellen, dass der Titel in der DOM korrekt gerendert wird.
 
@@ -47,7 +65,7 @@ Erweitere den obigen Test, um sicherzustellen, dass der Titel in der DOM korrekt
 
 ---
 
-## Abschnitt 2: Mocking von Services
+## Abschnitt 3: Mocking von Services
 
 Oft benötigen Komponenten externe Services. Diese sollten im Unit-Test gemockt werden.
 
@@ -83,13 +101,13 @@ describe('MyComponent', () => {
 });
 ```
 
-### Aufgabe 2: Mock hinzufügen
+### Aufgabe 3: Mock hinzufügen
 
 Erstelle eine Komponente mit einem Service, der eine HTTP-Anfrage ausführt. Mocke den Service im Test und stelle sicher, dass die Komponente den Mockwert verwendet.
 
 ---
 
-## Abschnitt 3: Arbeiten mit asynchronen Tests
+## Abschnitt 4: Arbeiten mit asynchronen Tests
 
 Asynchrone Funktionen wie HTTP-Aufrufe oder Timers benötigen spezielle Behandlung im Test.
 
@@ -112,15 +130,15 @@ describe('AsyncFunction', () => {
 });
 ```
 
-### Aufgabe 3: Test für asynchrone Funktion
+### Aufgabe 4: Test für asynchrone Funktion
 
 Schreibe eine Funktion, die einen Promise zurückgibt, und teste sie mit `async/await` und `fakeAsync`.
 
 ---
 
-## Abschnitt 4: Herausforderung - Komplexe Komponententests
+## Abschnitt 5: Herausforderung - Komplexe Komponententests
 
-### Aufgabe 4: Komplexe Interaktionen testen
+### Aufgabe 5: Komplexe Interaktionen testen
 
 1. Erstelle eine Komponente mit einem Formular (z. B. ein Login-Formular).
 2. Implementiere Tests, um sicherzustellen, dass:
@@ -131,7 +149,7 @@ Schreibe eine Funktion, die einen Promise zurückgibt, und teste sie mit `async/
 
 ---
 
-## Abschnitt 5: RxJS Pipes testen
+## Abschnitt 6: RxJS Pipes testen
 
 RxJS wird oft verwendet, um asynchrone Datenströme zu verarbeiten. Pipes können individuell getestet werden, um sicherzustellen, dass sie korrekt funktionieren.
 
@@ -156,14 +174,14 @@ describe('RxJS Pipe', () => {
 });
 ```
 
-### Aufgabe 5: Eigene Pipe testen
+### Aufgabe 6: Eigene Pipe testen
 
 1. Schreibe eine RxJS-Pipe, die alle ungeraden Zahlen filtert und die verbleibenden quadriert.
 2. Schreibe einen Test, der überprüft, ob die Pipe korrekt funktioniert.
 
 ---
 
-## Abschnitt 6: Angular Signals testen
+## Abschnitt 7: Angular Signals testen
 
 Angular Signals bieten eine reaktive Möglichkeit, Datenänderungen zu verfolgen. Sie können mit Unit-Tests überprüft werden.
 
@@ -185,7 +203,7 @@ describe('Angular Signals', () => {
 });
 ```
 
-### Aufgabe 6: Signal-Test
+### Aufgabe 7: Signal-Test
 
 1. Implementiere ein Signal, das einen Zähler darstellt.
 2. Schreibe Tests, um sicherzustellen, dass:
